@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: none;
+}
+
+.maintain-aspect-ratio {
+  width: auto;
+}
+
+.box-shadow {
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+
+.reel-section::-webkit-scrollbar {
+  width: 0;
+}
+
+.reel-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reel-section::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: transparent;
+}
+
+@media (min-width: 640px) {
+  .info-card-show {
+    animation: showCard ease-out 300ms 1;
+  }
+
+  .info-card-hide {
+    animation: hideCard ease-out 300ms 1;
+    display: none;
+    z-index: -1;
+  }
+
+  @keyframes showCard {
+    0% {
+      transform: translateX(0%) rotate(0deg);
+      display: block;
+      z-index: -1;
+    }
+    50% {
+      transform: translateX(-20%) rotate(-7deg);
+    }
+    100% {
+      transform: translateX(0%) rotate(0deg);
+    }
+  }
+
+  @keyframes hideCard {
+    0% {
+      transform: translateX(0%) rotate(0deg);
+      display: block;
+    }
+    50% {
+      transform: translateX(-20%) rotate(-7deg);
+    }
+    100% {
+      transform: translateX(0%) rotate(0deg);
+    }
+  }
+}
