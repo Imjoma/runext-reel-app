@@ -7,6 +7,8 @@ import Image from "next/image";
 import zoomIconButton from "../../public/assets/zoomIconButton.svg";
 import closeIconButtonLight from "../../public/assets/closeIconButtonLight.svg";
 
+import VideoArticleLoader from "./SkeletonLoader/VideoArticleLoader";
+
 import { contestant } from "../constants/contestant";
 
 import VideoArticleItem from "./VideoArticleItem";
@@ -54,7 +56,6 @@ bottom-[56px] left-1/2 -translate-x-1/2"
     if (mySwiper) {
       swiperElRef.current.addEventListener("slidechange", (e) => {
         const currentIndex = e.detail[0].activeIndex;
-        console.log(currentIndex);
         setActiveIndex(currentIndex);
         // ... set controlled components
         setCurrentPlayer([currentIndex - 1, currentIndex, currentIndex + 1]);
@@ -63,8 +64,6 @@ bottom-[56px] left-1/2 -translate-x-1/2"
       setMySwiper(true);
     }
   }, [mySwiper]);
-
-  console.log(currentPlayer);
 
   return (
     <section className={`${anton.className}`}>
@@ -100,6 +99,7 @@ bottom-[56px] left-1/2 -translate-x-1/2"
           {renderFullScreenButton}
         </>
       )}
+      {!mySwiper && <VideoArticleLoader />}
 
       {/* Toggler Button */}
     </section>

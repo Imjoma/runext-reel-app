@@ -11,25 +11,8 @@ img {
   -webkit-tap-highlight-color: none;
 }
 
-.maintain-aspect-ratio {
-  width: auto;
-}
-
 .box-shadow {
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-}
-
-.reel-section::-webkit-scrollbar {
-  width: 0;
-}
-
-.reel-section::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.reel-section::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  background: transparent;
 }
 
 @media (min-width: 640px) {

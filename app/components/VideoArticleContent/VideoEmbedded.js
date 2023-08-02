@@ -37,7 +37,7 @@ const VideoEmbedded = ({
     }
   }, [activeIndex]);
 
-  console.log(idx, videoRef.current);
+
 
   const maxRender = mountList.includes(idx) && (
     <ReactPlayer
